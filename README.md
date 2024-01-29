@@ -17,7 +17,6 @@
 # システムのシナリオ
 シナリオとして，工場のラインを想定してデモ動画では，行われている．
 以下にハードウェア構成とその外観について載せる．
-
 https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/b532a5dd-8f77-4a58-b221-452f2e6ff84e
 
 動画は以下から参照
@@ -48,12 +47,9 @@ $ roslaunch human_collaboration HumanCollaboration.launch
 
 ## システムモデル
 システム間のデータのやりとりは以下の通りである
-
 https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/ca6d8d19-4893-4509-b68e-dd27b1587703
 
-
 demo_systemのシステム構成は以下の通りである
-
 https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/4d36d575-89f0-41d2-b1e0-ad45257d27a6
 
 ## 貢献者
