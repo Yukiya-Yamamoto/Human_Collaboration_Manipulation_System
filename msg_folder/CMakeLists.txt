@@ -70,7 +70,6 @@ add_message_files(
   SetupResult.msg
 
   #for work_detection
-  TargetArea.msg
   WorkDetectionResult.msg
   WorkDetectionResultList.msg
 

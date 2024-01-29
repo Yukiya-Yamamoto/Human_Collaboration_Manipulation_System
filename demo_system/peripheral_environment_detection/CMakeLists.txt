@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(system_management_module)
+project(peripheral_environment_detection)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -8,13 +8,11 @@ project(system_management_module)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  actionlib
-  actionlib_msgs
+  geometry_msgs
   message_generation
   message_runtime
   rospy
   std_msgs
-  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -53,18 +51,19 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  WorkPresenceArea.msg
-  CandidateDischargeLocationArea.msg
-  CandidateDischargeLocationAreaList.msg
-  TaskResult.msg
-  TaskCommand.msg
-  TaskCommandList.msg
+  TargetArea.msg
+  AreaDivision.msg
+  AreaSetup.msg
+  AreaSetupList.msg
+  PerEnvDetectResult.msg
+  SetupResult.msg
 )
+
 
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  SystemManagement.srv
+  MonitoringAreaSetup.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -77,7 +76,6 @@ add_service_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  actionlib_msgs
   std_msgs
   geometry_msgs
 )
@@ -113,8 +111,8 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES system_manegement_module
-#  CATKIN_DEPENDS actionlib actionlib_msgs message_generation message_runtime rospy std_msgs
+#  LIBRARIES peripheral_environment_detection_module
+#  CATKIN_DEPENDS geometry_msgs message_generation message_runtime rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -125,13 +123,13 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  # include
   ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/system_manegement_module.cpp
+#   src/${PROJECT_NAME}/peripheral_environment_detection_module.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -142,7 +140,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/system_manegement_module_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/peripheral_environment_detection_module_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -206,7 +204,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_system_manegement_module.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_peripheral_environment_detection_module.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
