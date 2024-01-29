@@ -17,10 +17,13 @@
 # システムのシナリオ
 シナリオとして，工場のラインを想定してデモ動画では，行われている．
 以下にハードウェア構成とその外観について載せる．
-https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/b532a5dd-8f77-4a58-b221-452f2e6ff84e
+![ハードウェア構成](https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/a0212d4d-917a-4a6c-8967-68e0160c7d13)
+
 
 動画は以下から参照
-https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/11cac15f-276d-4409-b84b-b1d11332c902
+
+![デモ動画](https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/11cac15f-276d-4409-b84b-b1d11332c902)
+
 
 **このリポジトリのクローン**
 このリポジトリを自身の環境に合わせてクローンする
@@ -47,10 +50,11 @@ $ roslaunch human_collaboration HumanCollaboration.launch
 
 ## システムモデル
 システム間のデータのやりとりは以下の通りである
-https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/ca6d8d19-4893-4509-b68e-dd27b1587703
+![システム間のやりとり](https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/f7af74ba-4859-4642-815d-e2dd9168e4c4)
 
 demo_systemのシステム構成は以下の通りである
-https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/4d36d575-89f0-41d2-b1e0-ad45257d27a6
+<img width="700" alt="demo_system" src="https://github.com/Yukiya-Yamamoto/Human_Collaboration_Manipulation_System/assets/118329378/676278b7-f882-4b5e-ab81-6112303f4bc9">
+
 
 ## 貢献者
 Yukiya Yamamoto ([Yukiya-Yamamoto](https://github.com/Yukiya-Yamamoto))
